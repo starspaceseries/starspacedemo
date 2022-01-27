@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+<title>StarSpace Demo Version</title>
+<canvas id="canv" width=1350 height=627></canvas>
+<audio id="player1" style="display:none;" autoplay loop>
+<source src="https://cdn.discordapp.com/attachments/862995890684035113/921202392488362024/StarSpace_-_Main_Theme.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<style>
+body, html{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Verdana;
+}
+
+canvas{
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("https://cdn.discordapp.com/attachments/924839775066816523/934852978597302302/StarSpace_MainPoster2.png");
+    box-shadow: 0px 0px 5px indigo,0px 0px 5px purple,0px 0px 5px white;
+}
+    
+.button {
+  background-image: linear-gradient(magenta, blue);
+  font-family: Verdana;
+  border: none;
+  color: white;
+  padding:15px 32px;
+  position: absolute;
+  left: 850px;
+  bottom: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+    
+button:hover {
+box-shadow: 0px 0px 5px magenta;
+text-shadow: 0px 0px 5px white;
+}
+    
+#player1 {
+ width: 100%;
+ height: 7%;
+}
+</style>
+</head>
+<body onload ='playAudio();'>
+<script type = "module">
+var c = document.getElementById("canv");
+var ctx = c.getContext("2d");
+    
+var aud = document.getElementById("player1");
+    
+function playAudio() { 
+  aud.play(); 
+}
+    
+ctx.shadowBlur = "4";
+ctx.shadowColor = "white";
+ctx.font = "50px Verdana";
+ctx.strokeStyle = "white";
+ctx.strokeText("DEMO VERSION", 700, 440);
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("0"," magenta");
+gradient.addColorStop("1", "blue");
+//Fill gradient
+ctx.font = "50px Verdana";
+ctx.fillStyle = gradient;
+ctx.fillText("DEMO VERSION", 700, 440);
+
+ctx.shadowBlur = "4";
+ctx.shadowColor = "black";
+ctx.font = "17px Courier New";    
+ctx.strokeStyle = "black";
+ctx.strokeText("Press ENTER to listen to the main theme here.", 10, 620);    
+ctx.font = "17px Courier New";    
+ctx.fillStyle = "white";
+ctx.fillText("Press ENTER to listen to the main theme here.", 10, 620);
+    
+ctx.shadowBlur = "4";
+ctx.shadowColor = "black";
+ctx.font = "17px Verdana";    
+ctx.strokeStyle = "black";
+ctx.strokeText("Created by ANIMNADE GAMES", 1150, 620);        
+ctx.font = "17px Verdana";
+ctx.fillStyle = "white";
+ctx.fillText("Created by ANIMNADE GAMES", 1150, 620);
+    
+function keyDown(e) {
+//sound
+    if (e.keyCode === 13) {
+        playAudio();
+	 }
+}
+    
+document.onkeydown = keyDown;
+
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBHov1D78wZe_VA-1jkpQIZXkcsGUYU1KI",
+    authDomain: "pro-gecko-339413.firebaseapp.com",
+    projectId: "pro-gecko-339413",
+    storageBucket: "pro-gecko-339413.appspot.com",
+    messagingSenderId: "614602294914",
+    appId: "1:614602294914:web:b4a5a090288c5959f1169b",
+    measurementId: "G-WEN5K20B27"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+    <button class="button" onclick= "document.location='1starspacecity.html'")>PLAY</button>
+</html>
