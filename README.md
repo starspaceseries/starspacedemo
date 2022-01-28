@@ -1,4 +1,0 @@
-# starspacedemo
-
-StarSpace Demo is an HTML5 based game featuring a demo version of StarSpace. It has the first five out of the original eight levels.
-The levels consisting of the first five are only available in this game version. StarSpace Demo can be also regarded as the prototype game to the original, with the levels being the most defining feature of it. Each level ranges in ascending difficulty with a target score that increases each time you pass a level. However, the same is true concerning the increased player speed and score multipliers given in the game. Per each level, there are some common assets like the scoreboard, time display, a countdown timer for the upcoming sequel to the demo version, and tabs that can help you gather information regarding game updates, settings, instructions on how to play, and the story behind each level in the game itself.
