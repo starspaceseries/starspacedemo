@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+<title>StarSpace Demo Version</title>
+<button class="tablink" onclick="openPage('Home', this, '#050505')" id="defaultOpen"><b>Home</b></button>
+<button class="tablink" onclick="openPage('About', this, '#050505')"><b>About</b></button>
+<button class="tablink" onclick="openPage('Updates', this, '#050505')"><b>Updates</b></button>
+	
+<div id="Home" class="tabcontent">
+   <h1>STARSPACE</h1>
+	<h2 id="showScore"></h2>
+	<h2 id="showPower"></h2>
+	<h2 id="showClock">Loading Current Time...</h2>
+    <h2 id="showTimer">Loading Current Timer...</h2>
+   <canvas id="canv" width=1330 height=430></canvas>
+    <p style="font-size:14px">Created by <b>ANIMNADE GAMES</b></p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h1>About</h1>
+  <h3><u>Story:</u></h3>
+    <p style="font-size:14px"><b>Styra "Saikyo" Senshi</b> is an anonymous being that was sent out of a white hole knowing nothing of her powers. She was asleep for around ten billion years before arriving on a random planet known as "Perenorbius" in a region called "Fantastele Forest" by its inhabitants. There, she first awoke from her sleep and after staying there peacefully for around 5 billion years, she confronts a space pilot who would help begin her journey across worlds to figure out the reasoning for her existence. In the process, she will learn about the powers she holds to help her get closer to the mysterious answer. There are <b>ten eternal lights</b> known as the Omnilumens. They are guarded by seven celestial gaurdians each able to use their designated eternal lights, with a king guardian ruling over the eighth Omnilumen, an overlord guardian ruling over the ninth Omnilumen, and the master of the omniverse ruling the tenth Omnilumen (along with all ten).</p>
+
+<ol>
+  <li style="font-size:12px">Amethion: Keeper Of Time</li>
+  <li style="font-size:12px">Topazion: Keeper Of Energy</li>
+  <li style="font-size:12px">Sapphirion: Keeper Of Space</li>
+  <li style="font-size:12px">Citrinion: Keeper Of Sound</li>
+  <li style="font-size:12px">Emeraldion: Keeper Of Life</li>
+  <li style="font-size:12px">Diamondion: Keeper Of Reality</li>
+  <li style="font-size:12px">Spessarion: Keeper Of Surreality</li>
+  <li style="font-size:12px">Rubion <b>(King Strage)</b>: King Of Death</li>
+  <li style="font-size:12px">Onyxion <b>(Overlord Creperus)</b>: Overlord Of Darkness</li>
+  <li style="font-size:12px">Prismion <b>(Master Prism)</b>: Master Of The Omniverse</li>
+</ol>
+    
+  	<p style="font-size:14px"><b>Starspace City:</b> <em>The futuristic city owned by <b>Mr. Nebules</b> who is the mayor of this city. It is at the center of StarSpace, the first planet to form in the scope of the omniverse. A space soldier named <b>Flight Takeshi</b> helps Styra enter this city, but an ambush is planned by the mayor involving her stay. The protector of StarSpace, <b>Amethion</b> is manipulated to get Styra's powers for Mr. Nebules to experiment with further. It is here that Styra discovers her ability to run at high speeds.</em></p>
+  <h3><u>How To Play:</u></h3>
+   <p style="font-size:13px">Use the "UP" key to <b>JUMP</b>. Use the "LEFT" or "RIGHT" keys to move <b>LEFT</b> or <b>RIGHT</b> at normal speed (or "Z" <b>BOOST LEFT</b> and "X" <b>BOOST RIGHT</b> to boost speed above normal). Jumping will provide ways to avoid and hit enemies <b><em>for score multipliers</em></b> in order to finish the level faster. However, charging straight or falling into an enemy, means the game automatically ends. You must reach a power level of <b>200</b> to finish the level.</p>
+   <h3><u>Settings:</u></h3>
+   <p style="font-size:14px">You can play a music track on the home page by pressing <b>"1" for the game music</b>, <b>"2" for the main theme soundtrack</b>, <b>"3" for the series soundtrack</b> and it will automatically loop until you pause it by pressing <b>"P"</b>.</p>
+	<p style="font-size:13px"><b>Game Soundtrack: </b><em>Starspace City Theme</em></p>
+	<audio id="player" style="display:none;" autoplay loop>
+  <source src="https://cdn.discordapp.com/attachments/862995890684035113/923452617110204486/Level_1_-_Starspace_City.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="Updates" class="tabcontent">
+  <h1>Updates</h1>
+  <p><b>Keep up on the current changes for this level by checking the drop-down logs.</b></p>
+  <audio id="player2" style="display:none;">
+  <source src="https://cdn.discordapp.com/attachments/879378634945744966/900943117333725234/StyraPunchSound.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<audio id="player3" style="display:none;" loop>
+  <source src="https://cdn.discordapp.com/attachments/862995890684035113/921202392488362024/StarSpace_-_Main_Theme.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<audio id="player4" style="display:none;" loop>
+  <source src="https://cdn.discordapp.com/attachments/862995890684035113/921202393297850458/StarSpace_Series_Main_Theme_-_Shining_Star.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+  <p>Game Mechanic Updates:</p>
+  <form>
+  <select>
+  <option>2021</option>
+  <optgroup label = "May 14, 2021">
+  <option>Game log created.</option>
+  </optgroup>
+  <optgroup label = "August 25, 2021">
+  <option>Character, page, and background theme colors changed.</option>
+  </optgroup>
+  <optgroup label = "August 27, 2021">
+  <option>Added an enemy CPU, background and character lighting, and removed "DOWN" key that stops a player in place to make the game more action platformer friendly.</option>
+  </optgroup>
+  <optgroup label = "August 28, 2021">
+  <option>Added ability to jump as a safe move against enemy CPU. Falling or charging straight at enemy CPU will result in losing the game. Updated Story and How To Play, for necessary background information.</option>
+  <optgroup label = "September 5, 2021">
+  <option>Changed character and enemy player physics based on gravity, allowing flight.</option>
+  </optgroup>
+  <optgroup label = "September 20, 2021">
+  <option>Speed increases for background, player, and enemy - whenever you hit the enemy successfully. </option>
+  </optgroup>
+  <optgroup label = "October 12, 2021">
+  <option>Created Omnikra weapon. Allows you to hit an enemy and deflect them from hitting you immediately. </option>
+  </optgroup>
+  <optgroup label = "October 15, 2021">
+  <option>Updated Styra character design. </option>
+  </optgroup>
+  <optgroup label = "October 22, 2021">
+  <option>Updated background movement and gravity.</option>
+  </optgroup>
+   <optgroup label = "December 16, 2021">
+  <option>Added main theme soundtrack and series theme soundtrack, along with options to play and pause three different optional songs.</option>
+  </optgroup>
+  </select>
+  <br><br>
+</form>
+
+<form>
+  <select>
+  <option>2022</option>
+  <optgroup label = "January 23, 2022">
+    <option>Removed autoplay for additional music tracks and sound effects that may run on a different PC type.</option>
+  </optgroup>
+    <optgroup label = "January 24, 2022">
+    <option>Changed Styra's design.</option>
+  </optgroup>
+  </select>
+  <br><br>
+</form>
+</div>
+<style>
+body, html{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 99.99% 99.99%;
+  height: 97%;
+  font-family: Arial;
+} 
+
+canvas{
+	background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+	background-image: linear-gradient(#150059,#0d0010,hotpink);
+    margin-left: 0%;
+    margin-right: 0%;
+	margin-bottom: 1%;
+	box-shadow: 0px 0px 5px indigo,0px 0px 5px purple,0px 0px 5px white;
+}
+
+h1{
+  text-align: center;
+  color: black;
+  text-shadow: 0px 0px 7px #6f00ff, 0px 0px 7px white;
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  background-color: black;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.tablink {
+  background-color: black;
+  color: black;
+  float: center;
+  border: none;
+  cursor: pointer;
+  padding: 14px 10px;
+  outline: solid 1px #1C2833;
+  margin-bottom: 3px; 
+  font-size: 17px;
+  width: 33.1%;
+  text-shadow: 0px 0px 5px indigo,0px 0px 5px purple,0px 0px 5px white;
+}
+
+.tablink:hover {
+  background-color: #1B1B1B;
+  outline: solid 1px indigo;
+  box-shadow: 0px 0px 5px indigo,0px 0px 5px purple,0px 0px 5px white;
+  }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 10px 10px;
+  height: 93%;
+}
+
+#Home {background-color: black;}
+#About {background-color: black;}
+#Updates {background-color: black;}
+    
+    #showScore {
+        position: absolute;
+        top: 140px;
+        left: 35px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px blue, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+    }
+    #showPower {
+        position: absolute;
+        top: 160px;
+        left: 35px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px blue, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+     }
+	 #showClock {
+        position: absolute;
+        top: 535px;
+        left: 35px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px white, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+    }
+    #showTimer {
+        position: absolute;
+        top: 535px;
+        left: 910px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px purple, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+    }
+	 
+#player {
+ width: 100%;
+ height: 7%;
+}
+    
+#player2 {
+ width: 100%;
+ height: 7%;
+}
+    
+#player3 {
+ width: 100%;
+ height: 7%;
+}
+    
+#player4 {
+ width: 100%;
+ height: 7%;
+}
+</style>
+</head>
+<body>
+<script>
+  function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+var canvas = document.getElementById("canv");
+var c = canvas.getContext("2d");
+
+var clock = setInterval(myTimer, 1000);
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("showClock").innerHTML = d;
+}
+
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 22, 2022 05:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("showTimer").innerHTML = "STARSPACE 2 COUNTDOWN RELEASE: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("showTimer").innerHTML = "STARSPACE 2 AVAILABLE";
+  }
+}, 1000);    
+    
+var aud = document.getElementById("player");
+var aud2 = document.getElementById("player2");
+var aud3 = document.getElementById("player3");
+var aud4 = document.getElementById("player4");
+    
+    
+function playAudio() { 
+  aud.play(); 
+}
+
+function pauseAudio() { 
+  aud.pause(); 
+}
+    
+function playAudio2() { 
+  aud2.play(); 
+}
+
+function pauseAudio2() { 
+  aud2.pause(); 
+}
+function playAudio3() { 
+  aud3.play(); 
+}
+
+function pauseAudio3() { 
+  aud3.pause(); 
+}
+    
+function playAudio4() { 
+  aud4.play(); 
+}
+
+function pauseAudio4() { 
+  aud4.pause(); 
+}
+    
+//Styra
+class Player {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+          this.w = 15;
+          this.h = 30;
+          this.w1 = 4;
+          this.h1 = 4;
+		  this.w2 = 19;
+          this.h2 = 20;
+		  this.w3 = 6;
+          this.h3 = 10;
+		  this.w4 = 4;
+          this.h4 = 10;
+		  this.w5 = 5;
+          this.h5 = 10;
+		  this.w6 = 1.5;
+          this.h6 = 1.5;
+		  this.w7 = 16;
+          this.h7 = 7;
+		  this.w8 = 24;
+          this.h8 = 18;
+		  this.w9 = 14;
+		  this.h9 = 2;		
+          this.w10 = 2;  
+          this.h10 = 12;
+          this.w11 = 15;
+          this.h11 = 9;
+          this.w12 = 14;
+          this.h12 = 8;
+          this.w13 = 27;
+          this.h13 = 40;
+          this.w14 = 10;
+          this.h14 = 15;
+          this.w15 = 6;
+          this.h15 = 15;
+          this.w16 = 15;
+          this.h16 = 3;
+          this.w17 = 24;
+          this.h17 = 7;
+          this.w18 = 4;
+          this.h18 = 1;
+          this.w19 = 2;
+          this.h19 = 2;
+          this.w20 = 2.5;
+          this.h20 = 7;
+        this.ySpeed = 0;
+        this.xSpeed = 0;
+    }
+    
+    show() {
+        c.shadowBlur = 0;
+        c.shadowColor = 'black';
+        //backhair
+          c.fillStyle = 'black';
+        c.fillRect(this.x-7, this.y-25, this.w13, this.h13);
+        //legs
+          c.fillStyle = 'indigo';
+        c.fillRect(this.x, this.y, this.w, this.h);
+          c.fillStyle = '#000dff';
+        c.fillRect(this.x, this.y+27, this.w16, this.h16);
+        //head
+		  c.fillStyle = '#ffe6bd';
+        c.fillRect(this.x-2, this.y-20, this.w2, this.h2);
+        //eyelash
+		  c.fillStyle = '#000000';
+        c.fillRect(this.x, this.y-16, this.w7, this.h7);
+        //eyes
+		  c.fillStyle = '#ffffff';
+        c.fillRect(this.x+1, this.y-15, this.w3, this.h3);
+		  c.fillStyle = '#ffffff';
+        c.fillRect(this.x+12, this.y-15, this.w4, this.h4);
+		  c.fillStyle = '#4d0eab';
+        c.fillRect(this.x+4, this.y-15, this.w5, this.h5);
+        c.fillStyle = 'black';
+        c.fillRect(this.x+5.7, this.y-13.5, this.w20, this.h20);
+		  c.fillStyle = 'white';
+        c.fillRect(this.x+5, this.y-14, this.w6, this.h6);
+         c.fillStyle = 'white';
+        c.fillRect(this.x+7, this.y-9, this.w6, this.h6);
+         c.fillStyle = '#ffe6bd';
+		c.fillRect(this.x+9, this.y-16, this.w10, this.h10);
+        //fronthair
+         c.fillStyle = 'black';
+        c.fillRect(this.x+9, this.y-23, this.w14, this.h14);
+         c.fillStyle = 'black';
+        c.fillRect(this.x-5, this.y-25, this.w15, this.h15);
+        //torso
+		  c.fillStyle = '#440066';
+        c.fillRect(this.x-5, this.y+2, this.w8, this.h8);
+          c.fillStyle = '#000dff';
+        c.fillRect(this.x-5, this.y+12, this.w17, this.h17);
+          c.fillStyle = '#1a0029';
+        c.fillRect(this.x, this.y+3, this.w11, this.h11);
+          c.fillStyle = '#340052';
+        c.fillRect(this.x, this.y+12, this.w12, this.h12);
+		  c.fillStyle = '#000dff';
+		c.fillRect(this.x, this.y, this.w9, this.h9);
+         c.fillStyle = 'white';
+        c.fillRect(this.x+6, this.y+5, this.w1, this.h1);
+        c.fillRect(this.x+1, this.y+4, this.w18, this.h18);
+        c.fillRect(this.x+11, this.y+4, this.w18, this.h18);
+        c.fillRect(this.x+1, this.y+9, this.w18, this.h18);
+        c.fillRect(this.x+11, this.y+9, this.w18, this.h18);
+         c.fillStyle = '#440066';
+        c.fillRect(this.x+7, this.y+6, this.w19, this.h19);
+    }
+    
+    update() {
+	 
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
+        this.ySpeed += gravity;
+        
+        if (this.y >= 285) {
+            this.ySpeed = 0;
+            canJump = true;
+        } else {
+            canJump = false;
+        }
+		  
+		if (this.x <= 5) {
+            this.xSpeed = 3;
+            canMove = false;
+        } else {
+            canMove = true;
+        }
+		  
+		  if (this.x >= 1330) {
+            this.xSpeed = -3;
+            canMove = false;
+        } else {
+            canMove = true;
+        }
+        
+        if (this.x <= -65) {
+            c.save
+            location.reload();
+        }
+		  
+		if (this.x >= 1390) {
+            c.save();
+            location.reload();
+            c.restore();
+        }
+    }
+}
+
+class Enemy {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.w = 19;
+        this.h = 20;
+        this.w2 = 27;
+        this.h2 = 21;
+        this.w3 = 15;
+        this.h3 = 38;
+        this.w4 = 3;
+        this.h4 = 5;
+		this.w5 = 17;
+        this.h5 = 9;
+        this.w6 = 3;
+        this.h6 = 13;
+        this.xSpeed2 = -5;
+        this.ySpeed2 = -5;
+    }
+    
+    show() {
+        c.shadowBlur = 10;
+        c.shadowColor = '#a500ff';
+          c.fillStyle = '#220033';
+        c.fillRect(this.x-2, this.y-20, this.w, this.h);
+        c.fillRect(this.x-5, this.y+2, this.w2, this.h2);
+        c.fillRect(this.x, this.y, this.w3, this.h3);
+          c.fillStyle = 'black';
+        c.fillRect(this.x+4, this.y-12.5, this.w6, this.h6);
+        c.fillRect(this.x-1, this.y-15, this.w5, this.h5);
+          c.fillStyle = '#a500ff';
+        c.fillRect(this.x+10, this.y-12.5, this.w4, this.h4);
+        c.fillRect(this.x-1.5, this.y-12.5, this.w4, this.h4);
+        c.fillRect(this.x+5, this.y+6, this.w4, this.h4);
+    }
+    
+    update() {
+        this.x += this.xSpeed2;
+        this.y += this.ySpeed2;
+        this.ySpeed2 += gravity2;
+        
+         if (this.y >= 277) {
+            this.ySpeed2 = 0;
+            canJump2 = true;
+        } else {
+            canJump2 = false;
+        }
+        
+        if (this.x <= 5) {
+            this.xSpeed2 = 3;
+            canMove2 = false;
+        } else {
+            canMove2 = true;
+        }
+		  
+		  if (this.x >= 1330) {
+            this.xSpeed2 = -3;
+            canMove2 = false;
+        } else {
+            canMove2 = true;
+        }
+        
+        if (this.x < p.x + p.w && this.x + this.w > p.x && this.y < p.y + p.h && this.y + this.h > p.y && p.ySpeed >= 0 ) {
+            c.save();
+            c.fillStyle = 'black';
+            c.fillRect(0, 150, 2000, 70);
+            c.shadowBlur = "4";
+            c.shadowColor = "white";
+            c.font = "50px Courier New";    
+            c.strokeStyle = "white";
+            c.strokeText("Press SHIFT to restart.", 350, 200);    
+            c.font = "50px Courier New";    
+            c.fillStyle = "white";
+            c.fillText("Press SHIFT to restart.", 350, 200);
+            alert("AMETHION: Calm yourself creature. You know not what challenge will lie ahead. I suggest you leave, unless you are willing to challenge me.");
+		    pauseCanvasGrid();
+            c.restore();
+            }
+        
+            if (this.x < p.x + p.w && this.x + this.w > p.x && this.y < p.y + p.h && this.y + this.h > p.y && p.ySpeed <= -1) {
+            playAudio2();
+            enmy.ySpeed2 = -2.6;
+            score += 2;
+            power += 4;
+            xSpeed += 0.1;
+            xSpeed2 += 0.5;
+            xSpeed3 += 0.09;
+            }
+      }
+}
+
+class Water {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.w = 10;
+        this.h = 185;
+        this.w2 = 30;
+        this.h2 = 10;
+        this.w3 = 30;
+        this.h3 = 30;
+        this.xSpeed = 0;
+    }
+    
+    show() {
+        //street lamps
+        c.shadowBlur = 0;
+        c.shadowColor = 'white';
+          c.fillStyle = 'silver';
+        c.fillRect(this.x-200, this.y-250, this.w, this.h);
+        c.fillRect(this.x-210, this.y-70, this.w2, this.h2);
+        c.fillRect(this.x-210, this.y-260, this.w2, this.h2);
+       //street lamps 2
+        c.fillRect(this.x-300, this.y-160, this.w, this.h);
+        c.fillRect(this.x-310, this.y+20, this.w2, this.h2);
+        c.fillRect(this.x-310, this.y-170, this.w2, this.h2);
+        //light
+        c.shadowBlur = 20;
+        c.shadowColor = 'cyan';
+        c.fillStyle = 'cyan';
+        c.fillRect(this.x-210, this.y-245, this.w3, this.h3);
+        c.fillStyle = 'cyan';
+        c.fillRect(this.x-310, this.y-155, this.w3, this.h3);
+	 }
+    
+	 update() {
+         if (this.x < p.x - p.w && this.x - this.w > p.x && this.y < p.y - p.h && this.y - this.h > p.y) {
+             c.save();
+             c.pauseCanvasGrid();
+             c.restore();
+          }
+     }
+}    
+
+class Background {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.w = 10;
+        this.h = 200;
+        this.w2 = 30;
+        this.h2 = 40;
+        this.w3 = 100;
+        this.h3 = 100;
+        this.xSpeed3 = 0;
+    }
+    
+    show() {
+        c.shadowBlur = 0;
+        c.shadowColor = '#47ddff';
+	 	  c.fillStyle = '#0d0014';
+        c.fillRect(this.x, this.y-300, this.w, this.h);
+        c.shadowBlur = 20;
+        c.shadowColor = '#47ddff';
+          c.fillStyle = '#47ddff';
+        c.fillRect(this.x-40, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-100, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-160, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-220, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-400, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-460, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-520, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-580, this.y-200, this.w2, this.h2);
+        c.fillRect(this.x-40, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-100, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-160, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-220, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-280, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-340, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-400, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-460, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-520, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-580, this.y-300, this.w2, this.h2);
+        c.fillRect(this.x-345, this.y-200, this.w3, this.h3);
+	 }
+    
+	 update() {
+         if (this.x < p.x - p.w && this.x - this.w > p.x && this.y < p.y - p.h && this.y - this.h > p.y) {
+             c.save();
+             c.pauseCanvasGrid();
+             c.restore();
+        }
+    }
+}
+
+var p;
+var enmy;
+var gravity = 0.25;
+var gravity2 = 0.25;
+var canJump = true;
+var canMove = true;
+var canJump2 = true;
+var canMove2 = true;
+
+var bkgd = [];
+var bkgdX = 300;
+
+var watr = [];
+var watrX = 200;
+    
+var score = 0;
+var power = 0;
+
+window.onload = function() {
+    start();
+	setInterval(update, 1000/60);
+}
+
+function start() {
+p = new Player(100, 285);
+enmy = new Enemy (700, 277);
+	  	
+    for (let i = 0; i < 999; i++) {
+        var b = new Background(bkgdX, 300);
+        bkgd.push(b);
+        bkgdX += Math.floor(300) + 300;
+     }
+    
+    for (let i = 0; i < 999; i++) {
+        var o = new Water(watrX, 283);
+        watr.push(o);
+        watrX += Math.floor(300) + 300;
+     }
+    
+    xSpeed = 0;
+    xSpeed2 = 0;
+    xSpeed3 = 0;
+}
+
+function update() {
+    canvas.width=canvas.width;
+    //ground
+	 c.fillStyle = '#29003d';
+    c.fillRect(0, 200, 2000, 70);
+	 c.fillStyle = '#130021';
+    c.fillRect(0, 230, 2000, 90);
+	 c.fillStyle = '#29003d';
+    c.fillRect(0, 310, 2000, 70);
+    c.fillStyle = '#4f259c';
+    c.fillRect(0, 340, 2000, 100);
+	 c.fillStyle = '#3a0059';
+    c.fillRect(0, 340, 2000, 30);
+    
+    //bkgd
+    for (let i = 0; i < bkgd.length; i++) {
+        bkgd[i].show();
+        bkgd[i].update();
+        bkgd[i].x -= xSpeed3;
+    }
+    
+    //water
+    for (let i = 0; i < watr.length; i++) {
+        watr[i].show();
+        watr[i].update();
+        watr[i].x -= xSpeed;
+    }
+    
+    //player
+    p.show();
+    p.update();
+    //enemy
+    enmy.show();
+    enmy.update();
+	  
+    document.getElementById("showScore").innerHTML = "Score: " + score;
+    document.getElementById("showPower").innerHTML = "Power: " + power + " JPS";
+    
+	if (power >= 200) {
+        location.assign('2rainbowfallarena.html');
+	alert("AMETHION: I see you have much to learn, but much potential. The first eternal light is TIME. It seems you have such abilities to overpower it even under my use. It is fate that I will give this light to The New Guardian. There are many that have attempted to steal it and fail, but you had no intention of doing so. Take it and go to the Rainbowfall Arena. The next light awaits you...");
+        pauseCanvasGrid();
+	}
+}
+	 
+function changeSpeed() {
+    xSpeed += 0.1;
+}
+
+function changeSpeed2() {
+    xSpeed2 += 0.5;
+}
+
+function changeSpeed3() {
+    xSpeed3 += 0.1;
+}    
+
+function increaseScore() {
+    score++;
+}
+
+function increasePower() {
+    power++;
+}
+
+setInterval(changeSpeed, 500);
+setInterval(changeSpeed2, 500);
+setInterval(changeSpeed3, 530);
+setInterval(increaseScore, 1000);
+setInterval(increasePower, 500);
+
+function pauseCanvasGrid(canvasID){
+    canvas = document.getElementById(canvasID); //because we are looping //each location has its own canvas ID
+    context = canvas.getContext('2d');
+    context.beginPath();
+
+    // Store the current transformation matrix
+    context.save();
+    // Use the identity matrix while clearing the canvas
+    // Restore the transform
+    context.restore(); //CLEARS THE SPECIFIC CANVAS COMPLETELY FOR NEW DRAWING
+}
+
+function keyDown(e) {
+     if (e.keyCode === 38 && canJump) {
+        p.ySpeed = -5.3;
+	 }
+	 if (e.keyCode === 37 && canMove) {
+        p.xSpeed = -5;
+	 }
+	 if (e.keyCode === 39 && canMove) {
+        p.xSpeed = 5;
+	 }
+	 if (e.keyCode === 90 && canMove) {
+        p.xSpeed = -30;
+	 }
+	 if (e.keyCode === 88 && canMove) {
+        p.xSpeed = 30;
+	 }
+    //sound
+	 if (e.keyCode === 49) {
+        playAudio();
+	 }
+     if (e.keyCode === 50) {
+        playAudio3();
+	 }
+     if (e.keyCode === 51) {
+        playAudio4();
+	 } 
+	 if (e.keyCode === 80) {
+        pauseAudio();
+        pauseAudio3();
+        pauseAudio4();
+     }
+     //restart
+     if (e.keyCode === 16) {
+         location.reload();
+	 }
+}
+
+document.onkeydown = keyDown;
+</script>
+</body>
+</html>
