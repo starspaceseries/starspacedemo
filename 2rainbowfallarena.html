@@ -295,13 +295,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("showTimer").innerHTML = "STARSPACE 2 COUNTDOWN RELEASE: " + days + "d " + hours + "h "
+  document.getElementById("showTimer").innerHTML = "STARSPACE 2 DEMO COUNTDOWN RELEASE: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("showTimer").innerHTML = "STARSPACE 2 AVAILABLE";
+    document.getElementById("showTimer").innerHTML = "STARSPACE 2 DEMO AVAILABLE";
   }
 }, 1000);    
     
