@@ -277,7 +277,7 @@ function myTimer() {
 }
 
 // Set the date we're counting down to
-var countDownDate = new Date("Apr 16, 2023 05:00:00").getTime();
+var countDownDate = new Date("Dec 23, 2023 06:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -295,13 +295,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("showTimer").innerHTML = "STARSPACE 2 DEMO COUNTDOWN RELEASE: " + days + "d " + hours + "h "
+  document.getElementById("showTimer").innerHTML = "STARSPACE 2 COUNTDOWN RELEASE: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("showTimer").innerHTML = "STARSPACE 2 DEMO AVAILABLE";
+    document.getElementById("showTimer").innerHTML = "STARSPACE 2 AVAILABLE";
   }
 }, 1000);    
     
@@ -503,7 +503,7 @@ class Enemy {
         this.h3 = 38;
         this.w4 = 3;
         this.h4 = 5;
-		this.w5 = 17;
+        this.w5 = 17;
         this.h5 = 9;
         this.w6 = 3;
         this.h6 = 13;
