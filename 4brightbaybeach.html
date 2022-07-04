@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+<title>StarSpace Demo Version</title>
+<button class="tablink" onclick="openPage('Home', this, '#050505')" id="defaultOpen"><b>Home</b></button>
+<button class="tablink" onclick="openPage('About', this, '#050505')"><b>About</b></button>
+<button class="tablink" onclick="openPage('Updates', this, '#050505')"><b>Updates</b></button>
+	
+<div id="Home" class="tabcontent">
+   <h1>BRIGHTBAY BEACH</h1>
+	<h2 id="showScore"></h2>
+	<h2 id="showPower"></h2>
+	<h2 id="showClock">Loading Current Time...</h2>
+    <h2 id="showTimer">Loading Current Timer...</h2>
+   <canvas id="canv" width=1330 height=430></canvas>
+   <p style="font-size:14px">Created by <b>ANIMNADE - 2022</b></p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h1>About</h1>
+  <h3><u>Story:</u></h3>
+        <p style="font-size:14px"><b>Styra</b> is an anonymous being that was sent out of a bright light knowing nothing of her powers. She was asleep for around ten billion years before arriving on a random planet known as "Perenorbius" in a region called "Fantastele Forest" by its inhabitants. There, she first awoke from her sleep and after staying there peacefully for around five billion years, she confronts a space pilot who would help begin her journey across worlds to figure out the reasoning for her existence. In the process, she will learn about the powers she holds to help her get closer to the mysterious answer. There are <b>ten eternal lights</b> known as the Omnilumens. They are guarded by seven celestial guardians each able to use their designated eternal lights, with a king guardian ruling over the eighth Omnilumen, an overlord guardian ruling over the ninth Omnilumen, and the master of the omniverse ruling the tenth Omnilumen (along with all ten).</p>
+ 
+<ol>
+  <li style="font-size:12px">Amethion: Keeper Of Time</li>
+  <li style="font-size:12px">Topazion: Keeper Of Energy</li>
+  <li style="font-size:12px">Sapphirion: Keeper Of Space</li>
+  <li style="font-size:12px">Citrinion: Keeper Of Sound</li>
+  <li style="font-size:12px">Emeraldion: Keeper Of Life</li>
+  <li style="font-size:12px">Diamondion: Keeper Of Reality</li>
+  <li style="font-size:12px">Spessarion: Keeper Of Surreality</li>
+  <li style="font-size:12px">Rubion <b>(King Strage)</b>: King Of Death</li>
+  <li style="font-size:12px">Onyxion <b>(Overlord Creperus)</b>: Overlord Of Darkness</li>
+  <li style="font-size:12px">Prismion <b>(Master Prism)</b>: Master Of The Omniverse</li>
+</ol>
+    
+<p style="font-size:14px"><b>Brightbay Beach:</b> <em>On the planet Sonus, it is an island consisting of tropical lands and bodies of water. The largest of these islands is called Brightbay, holding a secret temple in the middle of the island that will allow teleportation to any place in the omniverse using the fourth Omnilumen. However, <b>Citrinion</b> prevents anyone from entering the island to ensure threats don't take advantage of it for destructive reasons. It is here where Styra learns to summon and use The Omnikra.</em></p>
+  <h3><u>How To Play:</u></h3>
+   <p style="font-size:13px">All moves from the previous level can be applied here. To use the Omnikra, press keys "A" for <b>LEFT</b>, "D" for <b>RIGHT</b>, "W" for <b>UP</b>, and "C" to <b>CALL</b> the Omnikra back to you. This weapon is very reactive to boundaries in-game and will bounce off, landing unexpected moves against your enemies. If it comes in your direction, you will automatically be able to grab the Omnikra. You must reach a power level of <b>800</b> to finish the level while avoiding or, beating enemy attacks.</p>
+   <h3><u>Settings:</u></h3>
+   <p style="font-size:14px">You can play a music track on the home page by pressing <b>"1" for the game music</b>, <b>"2" for the main theme soundtrack</b>, <b>"3" for the series soundtrack</b> and it will automatically loop until you pause it by pressing <b>"P"</b>.</p>
+	<p style="font-size:13px"><b>Game Soundtrack: </b><em>Brightbay Beach Theme</em></p>
+	<audio id="player" style="display:none;" autoplay loop>
+  <source src="https://cdn.discordapp.com/attachments/862995890684035113/923452619320606760/Level_4_-_Brightbay_Beach.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="Updates" class="tabcontent">
+  <h1>Updates</h1>
+  <p><b>Keep up on the current changes for this level by checking the drop-down logs.</b></p>
+  <audio id="player2" style="display:none;">
+  <source src="https://cdn.discordapp.com/attachments/879378634945744966/900943117333725234/StyraPunchSound.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+  <audio id="player3" style="display:none;">
+  <source src="https://cdn.discordapp.com/attachments/879378634945744966/901127458567372830/OmnikraHitSound.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<audio id="player4" style="display:none;" loop>
+  <source src="https://cdn.discordapp.com/attachments/862995890684035113/921202392488362024/StarSpace_-_Main_Theme.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<audio id="player5" style="display:none;" loop>
+  <source src="https://cdn.discordapp.com/attachments/862995890684035113/921202393297850458/StarSpace_Series_Main_Theme_-_Shining_Star.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+  <p>Game Mechanic Updates:</p> 
+  <form>
+  <select>
+  <option>2021</option>
+  <optgroup label = "May 14, 2021">
+  <option>Game log created.</option>
+  </optgroup>
+  <optgroup label = "August 25, 2021">
+  <option>Character, page, and background theme colors changed.</option>
+  </optgroup>
+  <optgroup label = "August 27, 2021">
+  <option>Added an enemy CPU, background and character lighting, and removed "DOWN" key that stops a player in place to make the game more action platformer friendly.</option>
+  </optgroup>
+  <optgroup label = "August 28, 2021">
+  <option>Added ability to jump as a safe move against enemy CPU. Falling or charging straight at enemy CPU will result in losing the game. Updated Story and How To Play, for necessary background information.</option>
+  <optgroup label = "September 5, 2021">
+  <option>Changed character and enemy player physics based on gravity, allowing flight.</option>
+  </optgroup>
+  <optgroup label = "September 20, 2021">
+  <option>Speed increases for background, player, and enemy - whenever you hit the enemy successfully. </option>
+  </optgroup>
+  <optgroup label = "October 12, 2021">
+  <option>Created Omnikra weapon. Allows you to hit an enemy and deflect them from hitting you immediately. </option>
+  </optgroup>
+  <optgroup label = "October 15, 2021">
+  <option>Updated Styra character design. </option>
+  </optgroup>
+  <optgroup label = "October 22, 2021">
+  <option>Updated background movement and gravity.</option>
+  </optgroup>
+  <optgroup label = "December 16, 2021">
+  <option>Added main theme soundtrack and series theme soundtrack, along with options to play and pause three different optional songs.</option>
+  </select>
+  <br><br>
+</form>
+
+<form>
+  <select>
+    <option>2022</option>
+  <optgroup label = "January 23, 2022">
+    <option>Removed autoplay for additional music tracks and sound effects that may run on a different PC type.</option>
+  </optgroup>
+    <optgroup label = "January 24, 2022">
+    <option>Changed Styra's design.</option>
+  </optgroup>
+  </select>
+  <br><br>
+</form>
+</div>
+<style>
+body, html{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 99.99% 99.99%;
+  height: 97%;
+  font-family: Arial;
+} 
+
+canvas{
+	background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-image: linear-gradient(#0062ff, #4ac9ff, #a3e3ff, white);
+    margin-left: 0%;
+    margin-right: 0%;
+	 margin-bottom: 1%;
+	 box-shadow: 0px 0px 5px yellow,0px 0px 5px #ffff75,0px 0px 5px white;
+}
+
+h1{
+  text-align: center;
+  color: black;
+  text-shadow: 0px 0px 7px yellow, 0px 0px 7px white;
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  background-color: black;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.tablink {
+  background-color: black;
+  color: black;
+  float: center;
+  border: none;
+  cursor: pointer;
+  padding: 14px 10px;
+  outline: solid 1px #1C2833;
+  margin-bottom: 3px; 
+  font-size: 17px;
+  width: 33.1%;
+  text-shadow: 0px 0px 5px yellow,0px 0px 5px #ffff75,0px 0px 5px white;
+  }
+
+.tablink:hover {
+  background-color: #1B1B1B;
+  outline: solid 1px yellow;
+  box-shadow: 0px 0px 5px yellow,0px 0px 5px #ffff75,0px 0px 5px white;
+  }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 10px 10px;
+  height: 93%;
+}
+
+#Home {background-color: black;}
+#About {background-color: black;}
+#Updates {background-color: black;}
+    
+    #showScore {
+        position: absolute;
+        top: 140px;
+        left: 35px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px blue, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+    }
+    #showPower {
+        position: absolute;
+        top: 160px;
+        left: 35px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px blue, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+     }
+	 #showClock {
+        position: absolute;
+        top: 535px;
+        left: 35px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px white, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+    }
+    #showTimer {
+        position: absolute;
+        top: 535px;
+        left: 920px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0px 0px 7px black, 0px 0px 7px purple, 0px 0px 7px #6f00ff, 0px 0px 7px white;
+    }
+	 
+#player {
+ width: 100%;
+ height: 7%;
+}
+    
+#player2 {
+ width: 100%;
+ height: 7%;
+}
+
+#player3 {
+ width: 100%;
+ height: 7%;
+}
+    
+#player4 {
+ width: 100%;
+ height: 7%;
+}
+
+#player5 {
+ width: 100%;
+ height: 7%;
+}
+    
+</style>
+</head>
+<body>
+<script>
+  function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+var canvas = document.getElementById("canv");
+var c = canvas.getContext("2d");
+
+var clock = setInterval(myTimer, 1000);
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("showClock").innerHTML = d;
+}
+    
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 23, 2023 06:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("showTimer").innerHTML = "STARSPACE 2 COUNTDOWN RELEASE: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("showTimer").innerHTML = "STARSPACE 2 AVAILABLE";
+  }
+}, 1000);
+
+var aud = document.getElementById("player"); 
+var aud2 = document.getElementById("player2");
+var aud3 = document.getElementById("player3");
+var aud4 = document.getElementById("player4");
+var aud5 = document.getElementById("player5");
+    
+function playAudio() { 
+  aud.play(); 
+}
+
+function pauseAudio() { 
+  aud.pause(); 
+}
+    
+function playAudio2() { 
+  aud2.play(); 
+}
+
+function pauseAudio2() { 
+  aud2.pause();
+}
+    
+function playAudio3() { 
+  aud3.play(); 
+}
+
+function pauseAudio3() { 
+  aud3.pause();
+}
+
+function playAudio4() { 
+  aud4.play(); 
+}
+
+function pauseAudio4() { 
+  aud4.pause();
+}
+    
+function playAudio5() { 
+  aud5.play(); 
+}
+
+function pauseAudio5() { 
+  aud5.pause();
+}
+//Styra
+class Player {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+          this.w = 15;
+          this.h = 30;
+          this.w1 = 4;
+          this.h1 = 4;
+		  this.w2 = 19;
+          this.h2 = 20;
+		  this.w3 = 6;
+          this.h3 = 10;
+		  this.w4 = 4;
+          this.h4 = 10;
+		  this.w5 = 5;
+          this.h5 = 10;
+		  this.w6 = 1.5;
+          this.h6 = 1.5;
+		  this.w7 = 16;
+          this.h7 = 7;
+		  this.w8 = 24;
+          this.h8 = 18;
+		  this.w9 = 14;
+		  this.h9 = 2;		
+          this.w10 = 2;  
+          this.h10 = 12;
+          this.w11 = 15;
+          this.h11 = 9;
+          this.w12 = 14;
+          this.h12 = 8;
+          this.w13 = 27;
+          this.h13 = 40;
+          this.w14 = 10;
+          this.h14 = 15;
+          this.w15 = 6;
+          this.h15 = 19;
+          this.w16 = 15;
+          this.h16 = 2;
+          this.w17 = 24;
+          this.h17 = 5;
+          this.w18 = 4;
+          this.h18 = 1;
+          this.w19 = 2;
+          this.h19 = 2;
+          this.w20 = 2.5;
+          this.h20 = 7;
+        this.ySpeed = 0;
+        this.xSpeed = 0;
+    }
+    
+    show() {
+        c.shadowBlur = 40;
+        c.shadowColor = '#fff0f8';
+        //backhair
+          c.fillStyle = 'black';
+        c.fillRect(this.x-7, this.y-25, this.w13, this.h13);
+        //legs
+          c.fillStyle = '#000dff';
+        c.fillRect(this.x, this.y, this.w, this.h);
+        //head
+		  c.fillStyle = '#ffe6bd';
+        c.fillRect(this.x-2, this.y-20, this.w2, this.h2);
+        //eyelash
+		  c.fillStyle = '#000000';
+        c.fillRect(this.x, this.y-16, this.w7, this.h7);
+        //eyes
+		  c.fillStyle = '#ffffff';
+        c.fillRect(this.x+1, this.y-15, this.w3, this.h3);
+		  c.fillStyle = '#000000';
+        c.fillRect(this.x+12, this.y-15, this.w4, this.h4);
+		  c.fillStyle = '#d000ff';
+        c.fillRect(this.x+4, this.y-15, this.w5, this.h5);
+        c.fillStyle = 'black';
+        c.fillRect(this.x+5.7, this.y-13.5, this.w20, this.h20);
+		  c.fillStyle = 'white';
+        c.fillRect(this.x+5, this.y-14, this.w6, this.h6);
+         c.fillStyle = 'white';
+        c.fillRect(this.x+7, this.y-9, this.w6, this.h6);
+         c.fillStyle = '#ffe6bd';
+		c.fillRect(this.x+9, this.y-16, this.w10, this.h10);
+        //fronthair
+         c.fillStyle = '#474747';
+        c.fillRect(this.x+9, this.y-23, this.w14, this.h14);
+         c.fillStyle = '#474747';
+        c.fillRect(this.x-5, this.y-25, this.w15, this.h15);
+        c.fillStyle = '#474747';
+		c.fillRect(this.x+11, this.y-24, this.w9, this.h9);
+         c.fillStyle = '#474747';
+		c.fillRect(this.x+9, this.y-26, this.w9, this.h9);
+        //torso
+		  c.fillStyle = '#340052';
+        c.fillRect(this.x-5, this.y+2, this.w8, this.h8);
+          c.fillStyle = '#5b008f';
+        c.fillRect(this.x-5, this.y, this.w17, this.h17);
+          c.fillStyle = '#000dff';
+        c.fillRect(this.x-5, this.y+14, this.w17, this.h17);
+          c.fillStyle = '#1a0029';
+        c.fillRect(this.x, this.y+3, this.w11, this.h11);
+          c.fillStyle = '#340052';
+        c.fillRect(this.x, this.y+12, this.w12, this.h12);
+		  c.fillStyle = '#000dff';
+		c.fillRect(this.x, this.y, this.w9, this.h9);
+         c.fillStyle = 'white';
+        c.fillRect(this.x+6, this.y+5, this.w1, this.h1);
+        c.fillRect(this.x+1, this.y+4, this.w18, this.h18);
+        c.fillRect(this.x+11, this.y+4, this.w18, this.h18);
+        c.fillRect(this.x+1, this.y+9, this.w18, this.h18);
+        c.fillRect(this.x+11, this.y+9, this.w18, this.h18);
+         c.fillStyle = '#440066';
+        c.fillRect(this.x+7, this.y+6, this.w19, this.h19);
+        c.fillStyle = '#000dff';
+        c.fillRect(this.x, this.y+12, this.w16, this.h16);
+    }
+    
+    update() {
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
+        this.ySpeed += gravity;
+        
+         if (this.y >= 300) {
+            this.ySpeed = 0;
+            canJump = true;
+        } else {
+            canJump = false;
+        }
+        
+         if (this.y <= 5) {
+            this.ySpeed = 3;
+        }
+        
+        
+        if (this.x <= 5) {
+            this.xSpeed = 3;
+            canMove = false;
+        } else {
+            canMove = true;
+        }
+		  
+		  if (this.x >= 1330) {
+            this.xSpeed = -3;
+            canMove = false;
+        } else {
+            canMove = true;
+        }
+        
+        if (this.x <= -65) {
+            location.reload();
+        }
+		  
+		if (this.x >= 1390) {
+            location.reload();
+        }
+    }
+}   
+    
+class Enemy {
+    constructor(x, y) {
+       this.x = x;
+        this.y = y;
+        this.w = 38;
+        this.h = 40;
+        this.w2 = 54;
+        this.h2 = 42;
+        this.w3 = 30;
+        this.h3 = 76;
+        this.w4 = 6;
+        this.h4 = 10;
+		this.w5 = 34;
+        this.h5 = 18;
+        this.w6 = 6;
+        this.h6 = 26;
+        this.xSpeed2 = -10;
+        this.ySpeed2 = 1.7;
+    }
+    
+    show() {
+        c.shadowBlur = 20;
+        c.shadowColor = '#faff00';
+          c.fillStyle = '#ceaf00';
+        c.fillRect(this.x-4, this.y-75, this.w, this.h);
+        c.fillRect(this.x-10, this.y-35, this.w2, this.h2);
+        c.fillRect(this.x-2, this.y-35, this.w3, this.h3);
+        c.fillStyle = 'black';
+        c.fillRect(this.x+4, this.y-60.5, this.w6, this.h6);
+        c.fillRect(this.x-3, this.y-65, this.w5, this.h5);
+          c.fillStyle = '#faff00';
+       c.fillRect(this.x+10, this.y-58.5, this.w4, this.h4);
+        c.fillRect(this.x-1.5, this.y-58.5, this.w4, this.h4);
+        c.fillStyle = 'white';
+        c.fillRect(this.x+5, this.y-30, this.w4, this.h4);
+    }
+    update() {
+        this.x += this.xSpeed2;
+        this.y += this.ySpeed2;
+        this.ySpeed2 += gravity2;
+        
+         if (this.y >= 290) {
+            this.ySpeed2 = -2;
+            canJump2 = true;
+        } else {
+            canJump2 = false;
+        }
+        
+        if (this.y <= 5) {
+            this.ySpeed2 = 3;
+        }
+        
+        
+        if (this.x <= 5) {
+            this.xSpeed2 = 7;
+            canMove2 = false;
+        } else {
+            canMove2 = true;
+        }
+		  
+		  if (this.x >= 1330) {
+            this.xSpeed2 = -7;
+            canMove2 = false;
+        } else {
+            canMove2 = true;
+        }
+        
+        if (this.x < omkra.x + omkra.w && this.x + this.w > omkra.x && this.y < omkra.y + omkra.h && this.y + this.h > omkra.y && omkra.ySpeed3 >= 0) {
+            playAudio3();
+            enmy.ySpeed2 = -10;
+            score += 4;
+            power += 8;
+            xSpeed += 0.2;
+            xSpeed2 += 0.6;
+          }
+        
+            if (this.x < p.x + p.w && this.x + this.w > p.x && this.y < p.y + p.h && this.y + this.h > p.y && p.ySpeed >= 0 ) {
+                c.fillStyle = 'black';
+                c.fillRect(0, 150, 2000, 70);
+                c.shadowBlur = "4";
+                c.shadowColor = "white";
+                c.font = "50px Courier New";    
+                c.strokeStyle = "white";
+                c.strokeText("Press SHIFT to restart.", 350, 200);    
+                c.font = "50px Courier New";    
+                c.fillStyle = "white";
+                c.fillText("Press SHIFT to restart.", 350, 200);
+                alert("CITRINION: The New Guardian is a false myth. Silence you imposter.");
+				pauseCanvasGrid();
+            }
+            if (this.x < p.x + p.w && this.x + this.w > p.x && this.y < p.y + p.h && this.y + this.h > p.y && p.ySpeed <= -1) {
+            playAudio2();
+            enmy.ySpeed2 = -7;
+            score += 4;
+            power += 8;
+            xSpeed += 0.3;
+            xSpeed2 += 0.7;
+            xSpeed4 += 0.05;
+            }
+     }
+}
+   
+class Omnikra {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+          this.w = 12;
+          this.h = 5;
+          this.w2 = 7;
+          this.h2 = 7;
+          this.w3 = 5;
+          this.h3 = 12;
+        this.ySpeed3 = 0;
+        this.xSpeed3 = 0;
+    }
+    
+    show() {
+        c.shadowBlur = 20;
+        c.shadowColor = '#fff0f8';
+        c.fillStyle = 'white';       
+        //blade1
+        c.fillRect(this.x+6, this.y-2, this.w, this.h);
+        c.fillRect(this.x, this.y, this.w2, this.h2);
+        //blade2
+        c.fillRect(this.x+22, this.y+10, this.w3, this.h3);
+        c.fillRect(this.x+18, this.y+4, this.w2, this.h2);
+        //blade3
+        c.fillRect(this.x-6, this.y+8, this.w3, this.h3);
+        c.fillRect(this.x-4, this.y+18, this.w2, this.h2);
+        //blade4
+        c.fillRect(this.x+4, this.y+26, this.w, this.h);
+        c.fillRect(this.x+14, this.y+22, this.w2, this.h2);
+    }
+    
+    update() {
+        this.x += this.xSpeed3;
+        this.y += this.ySpeed3;
+        this.ySpeed3 += gravity3;
+        
+         if (this.y >= 300) {
+            this.ySpeed3 = 0;
+            canJump3 = true;
+        } else {
+            canJump3 = false;
+        }
+             
+         if (this.y <= 5) {
+            this.ySpeed3 = 3;
+        }
+        
+        if (this.x <= 5) {
+            this.xSpeed3 = 3;
+            canMove3 = false;
+        } else {
+            canMove3 = true;
+        }
+		  
+		  if (this.x >= 1330) {
+            this.xSpeed3 = -3;
+            canMove3 = false;
+        } else {
+            canMove3 = true;
+        }
+        
+        if (this.x <= -65) {
+            location.reload();
+        }
+		  
+		if (this.x >= 1390) {
+            location.reload();
+        }
+        
+        if (this.x < p.x + p.w && this.x + this.w > p.x && this.y < p.y + p.h && this.y + this.h > p.y && p.ySpeed >= 0 ) {
+          omkra.x = p.x+10;
+          omkra.y = p.y;
+          omkra.xSpeed3 = p.xSpeed;
+          omkra.ySpeed3 = p.ySpeed;
+        }
+    }
+}
+   
+
+class Background {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.w = 10;
+        this.h = 15;
+        this.w2 = 20;
+        this.h2 = 80;
+        this.w3 = 30;
+        this.h3 = 40;
+        this.xSpeed4 = 0;
+    }
+    
+    show() {
+        c.shadowBlur = '0';
+        c.shadowColor = '#3f7500';
+        c.fillStyle = '#633613';
+        c.fillRect(this.x-4, this.y-20, this.w, this.h);
+        c.fillRect(this.x-6, this.y-50, this.w, this.h);
+        c.fillRect(this.x-8, this.y-80, this.w, this.h);
+        c.fillRect(this.x-10, this.y-110, this.w, this.h);
+        c.fillRect(this.x-12, this.y-140, this.w, this.h);
+        c.fillRect(this.x-14, this.y-170, this.w, this.h);
+        c.fillStyle = '#964e27'
+        c.fillRect(this.x-5, this.y-35, this.w, this.h);
+        c.fillRect(this.x-7, this.y-65, this.w, this.h);
+        c.fillRect(this.x-9, this.y-95, this.w, this.h);
+        c.fillRect(this.x-11, this.y-125, this.w, this.h);
+        c.fillRect(this.x-15, this.y-185, this.w, this.h);
+        //leaf1
+        c.fillStyle = '#338c00';
+        c.fillRect(this.x-47, this.y-190, this.w2, this.h2);
+        c.fillRect(this.x-52, this.y-160, this.w3, this.h3);
+        c.fillRect(this.x+13, this.y-190, this.w2, this.h2);
+        c.fillRect(this.x+12, this.y-160, this.w3, this.h3);
+        //leaf2
+        c.fillStyle = '#43b800';
+        c.fillRect(this.x-37, this.y-185, this.w2, this.h2);
+        c.fillRect(this.x-42, this.y-155, this.w3, this.h3);
+        c.fillRect(this.x+3, this.y-185, this.w2, this.h2);
+        c.fillRect(this.x+2, this.y-155, this.w3, this.h3);
+        //leaf3
+        c.fillStyle = '#4fd900';
+        c.fillRect(this.x-17, this.y-190, this.w2, this.h2);
+        c.fillRect(this.x-22, this.y-160, this.w3, this.h3);
+	 }
+    
+	 update() {
+        if (this.x < p.x - p.w && this.x - this.w > p.x && this.y < p.y - p.h && this.y - this.h > p.y) {
+            location.reload();
+        }
+    }
+}
+    
+class Background2 {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.w = 3;
+        this.h = 7;
+        this.w2 = 7;
+        this.h2 = 40;
+        this.w3 = 13;
+        this.h3 = 27;
+        this.xSpeed5 = 0;
+    }
+    
+    show() {
+        c.shadowBlur = '0';
+        c.shadowColor = '#3f7500';
+        c.fillStyle = '#633613';
+        c.fillRect(this.x-4, this.y-28, this.w, this.h);
+        c.fillRect(this.x-6, this.y-42, this.w, this.h);
+        c.fillRect(this.x-8, this.y-56, this.w, this.h);
+        c.fillRect(this.x-10, this.y-70, this.w, this.h);
+        c.fillRect(this.x-12, this.y-84, this.w, this.h);
+        c.fillRect(this.x-14, this.y-98, this.w, this.h);
+        c.fillStyle = '#964e27'
+        c.fillRect(this.x-5, this.y-35, this.w, this.h);
+        c.fillRect(this.x-7, this.y-49, this.w, this.h);
+        c.fillRect(this.x-9, this.y-63, this.w, this.h);
+        c.fillRect(this.x-11, this.y-77, this.w, this.h);
+        c.fillRect(this.x-15, this.y-91, this.w, this.h);
+        //leaf1
+        c.fillStyle = '#338c00';
+        c.fillRect(this.x-26, this.y-110, this.w2, this.h2);
+        c.fillRect(this.x-30, this.y-100, this.w3, this.h3);
+        c.fillRect(this.x+5, this.y-110, this.w2, this.h2);
+        c.fillRect(this.x+3, this.y-100, this.w3, this.h3);
+        //leaf2
+        c.fillStyle = '#43b800';
+        c.fillRect(this.x-22, this.y-105, this.w2, this.h2);
+        c.fillRect(this.x-24, this.y-95, this.w3, this.h3);
+        c.fillRect(this.x-2, this.y-105, this.w2, this.h2);
+        c.fillRect(this.x-4, this.y-95, this.w3, this.h3);
+        //leaf3
+        c.fillStyle = '#4fd900';
+        c.fillRect(this.x-12, this.y-110, this.w2, this.h2);
+        c.fillRect(this.x-15, this.y-100, this.w3, this.h3);
+	 }
+    
+	 update() {
+        if (this.x < p.x - p.w && this.x - this.w > p.x && this.y < p.y - p.h && this.y - this.h > p.y) {
+            location.reload();
+        }
+    }
+}
+ 
+class Cloud {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.w2 = 170;
+        this.h2 = 17;
+        this.w3 = 140;
+        this.h3 = 35;
+        this.xSpeed6 = 0;
+        
+    }
+    
+    show() {
+    c.shadowBlur = '20';
+    c.shadowColor = 'white';
+    c.fillStyle = 'white';
+    //cloud1
+    c.fillRect(this.x+110, this.y-120, this.w2, this.h2);
+    c.fillRect(this.x+100, this.y-130, this.w2, this.h2);
+    c.fillRect(this.x+120, this.y-140, this.w3, this.h3);
+    //cloud2
+    c.fillRect(this.x+330, this.y-50, this.w2, this.h2);
+    c.fillRect(this.x+320, this.y-60, this.w2, this.h2);
+    c.fillRect(this.x+350, this.y-70, this.w3, this.h3);
+    //cloud3
+    c.fillRect(this.x+500, this.y-20, this.w2, this.h2);
+    c.fillRect(this.x+490, this.y-30, this.w2, this.h2);
+    c.fillRect(this.x+510, this.y-40, this.w3, this.h3);
+    //cloud4
+    c.fillRect(this.x+340, this.y-140, this.w2, this.h2);
+    c.fillRect(this.x+330, this.y-150, this.w2, this.h2);
+    c.fillRect(this.x+350, this.y-160, this.w3, this.h3);
+    c.shadowBlur = '20';
+    c.shadowColor = '#f2f2f2';
+    c.fillStyle = '#f2f2f2';    
+    //cloud5
+    c.fillRect(this.x-130, this.y-100, this.w2, this.h2);
+    c.fillRect(this.x-150, this.y-110, this.w2, this.h2);
+    c.fillRect(this.x-140, this.y-120, this.w3, this.h3);
+    //cloud6
+    c.fillRect(this.x+470, this.y-100, this.w2, this.h2);
+    c.fillRect(this.x+460, this.y-110, this.w2, this.h2);
+    c.fillRect(this.x+480, this.y-120, this.w3, this.h3);
+    //cloud7
+    c.fillRect(this.x+30, this.y-150, this.w2, this.h2);
+    c.fillRect(this.x+20, this.y-160, this.w2, this.h2);
+    c.fillRect(this.x+40, this.y-170, this.w3, this.h3);
+    //cloud8
+    c.fillRect(this.x, this.y-70, this.w2, this.h2);
+    c.fillRect(this.x-10, this.y-80, this.w2, this.h2);
+    c.fillRect(this.x+10, this.y-90, this.w3, this.h3);
+	 }
+    
+	 update() {
+        if (this.x < p.x - p.w && this.x - this.w > p.x && this.y < p.y - p.h && this.y - this.h > p.y) {
+            location.reload();
+        }
+    }
+}
+  
+var p;
+var omkra;
+var enmy;
+var gravity = 0;
+var gravity2 = 0;
+var gravity3 = 0;
+var canJump = true;
+var canMove = true;
+var canJump2 = true;
+var canMove2 = true;
+var canJump3 = true;
+var canMove3 = true;
+
+var bkgd = [];
+var bkgdX = 50;
+var bkgd2 = [];
+var bkgd2X = 100;
+
+var cld = [];
+var cldX = 50;
+    
+var score = 0;
+var power = 0;
+
+window.onload = function() {
+    start();
+	setInterval(update, 1000/60);
+}
+
+function start() {
+p = new Player(100, 300);
+omkra = new Omnikra(60, 300);    
+enmy = new Enemy (700, 283);
+	  	
+    for (let i = 0; i < 599; i++) {
+        var b = new Background(bkgdX, 330);
+        bkgd.push(b);
+        bkgdX += Math.floor(450) + 250;
+     }
+    
+    for (let i = 0; i < 599; i++) {
+        var b2 = new Background2(bkgd2X, 330);
+        bkgd2.push(b2);
+        bkgd2X += Math.floor(450) + 250;
+     }
+    
+    for (let i = 0; i < 599; i++) {
+        var cd = new Cloud(cldX, 150);
+        cld.push(cd);
+        cldX += Math.floor(350) + 250;
+     }
+    
+    xSpeed = 0;
+    xSpeed2 = 0;
+    xSpeed3 = 0;
+    xSpeed4 = 0;
+    xSpeed5 = 0;
+    xSpeed6 = 0;
+}
+
+function update() {
+    canvas.width=canvas.width;
+    //cld
+    for (let i = 0; i < cld.length; i++) {
+        cld[i].show();
+        cld[i].update();
+        cld[i].x -= xSpeed6;
+    }
+    //ground
+    c.shadowBlur = '10';
+    c.shadowColor = '#013300';
+    c.fillStyle = '#012400';
+    c.fillRect(350, 140, 500, 50);
+     c.fillStyle = '#013800';
+    c.fillRect(100, 170, 1000, 100);
+     c.fillStyle = '#014f00';
+    c.fillRect(0, 220, 2000, 150);
+     c.fillStyle = '#026600';
+    c.fillRect(0, 280, 2000, 200);
+     c.fillStyle = '#ebb852';
+    c.fillRect(0, 320, 2000, 90);
+	 c.fillStyle = 'cyan';
+    c.fillRect(0, 350, 2000, 100);
+    
+    for (let i = 0; i < bkgd2.length; i++) {
+        bkgd2[i].show();
+        bkgd2[i].update();
+        bkgd2[i].x -= xSpeed5;
+    }
+    
+        //bkgd
+    for (let i = 0; i < bkgd.length; i++) {
+        bkgd[i].show();
+        bkgd[i].update();
+        bkgd[i].x -= xSpeed4;
+    }
+    //player
+    p.show();
+    p.update();
+    //omnikra
+    omkra.show();
+    omkra.update();
+    //enemy
+    enmy.show();
+    enmy.update();
+	  
+    document.getElementById("showScore").innerHTML = "Score: " + score;
+    document.getElementById("showPower").innerHTML = "Power: " + power + " JPS";
+    
+	if (power >= 800) {
+        location.assign('5whimsicalwoods.html');
+	alert("CITRINION: Apologies Styra. You wield Omnikra, which is the strongest weapon in existence. Legend foretells that it can be summoned by the worthiest Guardian, but none of us were seemingly fit to see nor use it. Use the SOUND Omnilumen to awaken the temple and teleport to where the next Omnilumen might be.");
+        pauseCanvasGrid();
+	}
+}
+	 
+function changeSpeed() {
+    xSpeed += 0.1;
+}
+
+function changeSpeed2() {
+    xSpeed2 += 0.5;
+}
+
+function changeSpeed3() {
+    xSpeed3 += 0.1;
+}   
+    
+function changeSpeed4() {
+    xSpeed4 += 0.09;
+}
+    
+function changeSpeed5() {
+    xSpeed5 += 0.07;
+}   
+    
+function changeSpeed6() {
+    xSpeed6 += 0.01;
+}       
+    
+function increaseScore() {
+    score++;
+}
+
+function increasePower() {
+    power++;
+}
+
+setInterval(changeSpeed, 500);
+setInterval(changeSpeed2, 500);
+setInterval(changeSpeed3, 500);
+setInterval(changeSpeed4, 1100);
+setInterval(changeSpeed5, 1100);
+setInterval(changeSpeed6, 3000);
+setInterval(increaseScore, 1000);
+setInterval(increasePower, 500);
+
+function pauseCanvasGrid(canvasID){
+    canvas = document.getElementById(canvasID); //because we are looping //each location has its own canvas ID
+    context = canvas.getContext('2d');
+    context.beginPath();
+
+    // Store the current transformation matrix
+    context.save();
+    // Use the identity matrix while clearing the canvas
+    context.setTransform(1, 0, 0, 1, 0, 0);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    // Restore the transform
+    context.restore(); //CLEARS THE SPECIFIC CANVAS COMPLETELY FOR NEW DRAWING
+}
+
+function keyDown(e) {
+    //player moves
+     if (e.keyCode === 38 && canJump) {
+        p.ySpeed = -7.3;
+	 }
+	 if (e.keyCode === 37 && canMove) {
+        p.xSpeed = -7;
+	 }
+	 if (e.keyCode === 39 && canMove) {
+        p.xSpeed = 7;
+	 }
+    if (e.keyCode === 90 && canMove) {
+        p.xSpeed = -54;
+	 }
+	 if (e.keyCode === 88 && canMove) {
+        p.xSpeed = 54;
+	 }
+    //omnikra moves
+     if (e.keyCode === 38 && canJump3) {
+        omkra.ySpeed3 = -7.3;
+	 }
+	 if (e.keyCode === 37 && canMove3) {
+        omkra.xSpeed3 = -7;
+	 }
+	 if (e.keyCode === 39 && canMove3) {
+        omkra.xSpeed3 = 7;
+     }
+     if (e.keyCode === 90 && canMove3) {
+        omkra.xSpeed3 = -54;
+	 }
+	 if (e.keyCode === 88 && canMove3) {
+        omkra.xSpeed3 = 54;
+	 }
+     if (e.keyCode === 87 && canMove3) {
+        omkra.ySpeed3 = -30.3;
+	 }
+	 if (e.keyCode === 65 && canMove3) {
+        omkra.xSpeed3 = -30;
+	 }
+	 if (e.keyCode === 68 && canMove3) {
+        omkra.xSpeed3 = 30;
+	 }
+     if (e.keyCode === 67) {
+        omkra.x = p.x+10;
+        omkra.y = p.y;
+        omkra.xSpeed3 = p.xSpeed;
+        omkra.ySpeed3 = p.ySpeed;
+	 }
+    //sound
+	 if (e.keyCode === 49) {
+        playAudio();
+	 }
+      if (e.keyCode === 50) {
+        playAudio4();
+	 }
+     if (e.keyCode === 51) {
+        playAudio5();
+     }
+	 if (e.keyCode === 80) {
+        pauseAudio();
+        pauseAudio4();
+        pauseAudio5();
+     }
+    
+     //restart
+     if (e.keyCode === 16) {
+         location.reload();
+	 }
+}
+
+document.onkeydown = keyDown;
+</script>
+</body>
+</html>
